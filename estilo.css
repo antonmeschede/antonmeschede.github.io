@@ -6,106 +6,178 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
-
-body {
-    min-height: 100vh;
-}
-
-.fullpageMenu
+section
 {
-    position:fixed;
+    padding: 100px;
+}
+.banner 
+{
+    position: relative;
+    min-height: 100vh;
+    background: black;
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner h2 
+{
+    font-size: 3em;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+.banner h2 span
+{
+    font-size: 1.5em;
+    font-weight: 700;
+}
+.banner h3
+{
+    font-size: 1.5em;
+    font-weight: 500;
+    color: white;
+}
+.btn
+{
+    position: relative;
+    background: springgreen;
+    display: inline-block;
+    color: black;
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+header
+{
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    background: #111;
     transition: 0.5s;
 }
-
-.fullpageMenu .banner 
-{
-    position:relative;
-    min-width: 600px;
-    height: 100%;
+header.sticky{
+    background: springgreen;
+    padding: 20px 100px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
-
-.fullpageMenu .nav
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
+header.sticky .logo{
+    color: black;
 }
-
-.fullpageMenu .nav ul
+header .logo
+{
+    color: white;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+header ul
 {
     position: relative;
+    display: flex;
 }
-
-.fullpageMenu .nav ul li
+header ul li 
 {
     position: relative;
     list-style: none;
-    padding: 0 20px;
-    margin: 5px 0;
-    overflow: hidden;
-    display: table;
 }
-
-.fullpageMenu .nav ul li:before
-{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: springgreen;
-    transition: transform 0.5s ease-in-out;
-    transform: scaleY(0)
-    transform-origin: bottom;
-}
-
-
-.fullpageMenu .nav ul li:hover:before
-{
-    transition: transform 0.5s ease-in-out;
-    transform: scaleY(1)
-    transform-orgin top;
-}
-
-.fullpageMenu .nav ul li a
+header ul li a
 {
     position: relative;
-    color: #fff;
-    text-decoration: none;
-    font-size: 4em;
-    font-weight: 700;
-    line-height: 1em;
-    padding-top: 12px;
     display: inline-block;
-    text-transform: uppercase;
-    transition: 0.5s ease-in-out;
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+}
+header.sticky ul li a {
+    color: black
+}
+.heading
+{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #111;
+}
+.heading h2
+{
+    font-weight: 600;
+    font-size: 30px;
 }
 
 
-.fullpageMenu .nav ul li a:before
+.content
 {
-    content: attr(data-text);
-    position: absolute;
-    bottom: -100%;
-    left: 0;
-    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+.contentBx
+{
+    padding-right: 30px;
+}
+.contentBx h3
+{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.w50
+{
+    min-width: 50%;
 }
 
-.fullpageMenu .nav ul li:hover a
+img
 {
-    transform: translateY(-100%);
+    max-width: 100%;
+}
+.services
+{
+    background: black;
+}
+.heading.white
+{
     color: #fff;
+}
+.services .content .servicesBx
+{
+    padding: 40px 20px;
+    background: #222;
+    color: #fff;
+    max-width: 340px;
+    margin: 20px;
+    text-align: center;
+    transition: 0.5s;
+    justify-content: center;
+}
+
+
+
+.services .content .servicesBx h2
+{
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 10px;
+    color: springgreen;
+}
+
+.services .content .servicesBx a 
+{
+    margin: 15px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: white;
+    padding: 5px;
+    border: 1px solid #333;
 }
